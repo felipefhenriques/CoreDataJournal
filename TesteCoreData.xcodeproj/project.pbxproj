@@ -17,6 +17,8 @@
 		023F099D2485CDC500E96EAF /* TesteCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023F099C2485CDC500E96EAF /* TesteCoreDataTests.swift */; };
 		023F09A82485CDC500E96EAF /* TesteCoreDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023F09A72485CDC500E96EAF /* TesteCoreDataUITests.swift */; };
 		023F09B72486C30500E96EAF /* Diario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023F09B62486C30500E96EAF /* Diario.swift */; };
+		023F09BB2486F09200E96EAF /* Tabela.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023F09BA2486F09200E96EAF /* Tabela.swift */; };
+		023F09BD2486F13800E96EAF /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023F09BC2486F13800E96EAF /* TableController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		023F09A72485CDC500E96EAF /* TesteCoreDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteCoreDataUITests.swift; sourceTree = "<group>"; };
 		023F09A92485CDC500E96EAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		023F09B62486C30500E96EAF /* Diario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diario.swift; sourceTree = "<group>"; };
+		023F09BA2486F09200E96EAF /* Tabela.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabela.swift; sourceTree = "<group>"; };
+		023F09BC2486F13800E96EAF /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				023F09B62486C30500E96EAF /* Diario.swift */,
+				023F09BA2486F09200E96EAF /* Tabela.swift */,
+				023F09BC2486F13800E96EAF /* TableController.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -281,6 +287,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				023F09BD2486F13800E96EAF /* TableController.swift in Sources */,
+				023F09BB2486F09200E96EAF /* Tabela.swift in Sources */,
 				023F09872485CDC000E96EAF /* ViewController.swift in Sources */,
 				023F09B72486C30500E96EAF /* Diario.swift in Sources */,
 				023F09832485CDC000E96EAF /* AppDelegate.swift in Sources */,

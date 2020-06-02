@@ -10,66 +10,6 @@ import Foundation
 import UIKit
 import CoreData
 
-class Lista: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var labelOla: UILabel!
-    @IBOutlet weak var bttNotaDiaria: UIButton!
-    public var notas:[NSManagedObject] = []
-    @IBOutlet weak var listaNotas: UITableView!
-    var objetoGerenciado: NSManagedObjectContext?
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-    
-    override func viewDidLoad() {
-        listaNotas.delegate = self
-        bttNotaDiaria.layer.cornerRadius = 40
-        self.navigationController?.isNavigationBarHidden = true
-        listaNotas.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-      listaNotas.delegate = self
-      super.viewWillAppear(animated)
-      lerEntradas()
-    }
-    
-    func lerEntradas(){
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-          return
-        }
-
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Entity")
-
-        do {
-          notas = try managedContext.fetch(fetchRequest)
-//          for i in 0..<notas.count{
-//              let entrada = self.notas[i]
-//              print(entrada.value(forKey: "corpoTexto") as? String)
-//          }
-        } catch let error as NSError {
-          print("Could not fetch. \(error), \(error.userInfo)")
-        }
-        self.listaNotas.reloadData()
-        
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.notas.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let nota = notas[indexPath.row]
-        print("tentativa")
-        print(cell.textLabel?.text = nota.value(forKeyPath: "criadoEm") as? String)
-        print("tentativa2")
-        print(cell.detailTextLabel?.text = nota.value(forKeyPath: "corpoTexto") as? String)
-        return cell
-    }
-    
-}
-
 class Entrada: UIViewController, UITextViewDelegate {
     @IBOutlet weak var textViewNota: UITextView!
     var objetoGerenciado: NSManagedObjectContext!
@@ -94,10 +34,10 @@ class Entrada: UIViewController, UITextViewDelegate {
     func criarNovaEntrada(){
         let date = Date()
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyy"
+        formatter.dateFormat = " dd\nMMMM\nyyy"
         let stringData = formatter.string(from: date)
         
-        let entidadeEntrada = NSEntityDescription.entity(forEntityName: "Entity", in: self.objetoGerenciado)
+        let entidadeEntrada = NSEntityDescription.entity(forEntityName: "TesteVic", in: self.objetoGerenciado)
         let objetoEntrada = NSManagedObject(entity: entidadeEntrada!, insertInto: self.objetoGerenciado)
         
         objetoEntrada.setValue(textViewNota.text, forKey: "corpoTexto")
@@ -115,7 +55,6 @@ class Entrada: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func bttAdicionar(_ sender: UIButton) {
-        //self.navigationController?.popViewController(animated: true)
         criarNovaEntrada()
         self.navigationController?.popViewController(animated: true)
     }
@@ -140,7 +79,7 @@ class Entrada: UIViewController, UITextViewDelegate {
     func defineData(label: UILabel){
         let date = Date()
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyy"
+        formatter.dateFormat = "dd/MM/yyyy"
         label.text = formatter.string(from: date)
     }
 

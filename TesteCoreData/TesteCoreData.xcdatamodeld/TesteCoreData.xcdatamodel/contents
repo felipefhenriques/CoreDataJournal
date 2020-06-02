@@ -8,8 +8,18 @@
         <attribute name="corpoTexto" optional="YES" attributeType="String"/>
         <attribute name="criadoEm" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="NotasTeste" representedClassName="NotasTeste" syncable="YES" codeGenerationType="class">
+        <attribute name="corpoTexto" optional="YES" attributeType="String"/>
+        <attribute name="criadoEm" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="TesteVic" representedClassName="TesteVic" syncable="YES" codeGenerationType="class">
+        <attribute name="corpoTexto" optional="YES" attributeType="String"/>
+        <attribute name="criadoEm" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
-        <element name="Nota" positionX="-54" positionY="-9" width="128" height="73"/>
         <element name="Entity" positionX="-36" positionY="27" width="128" height="73"/>
+        <element name="Nota" positionX="-54" positionY="-9" width="128" height="73"/>
+        <element name="NotasTeste" positionX="-18" positionY="54" width="128" height="73"/>
+        <element name="TesteVic" positionX="0" positionY="72" width="128" height="73"/>
     </elements>
 </model>
