@@ -34,19 +34,23 @@ class Entrada: UIViewController, UITextViewDelegate {
     func criarNovaEntrada(){
         let date = Date()
         let formatter = DateFormatter()
-        formatter.dateFormat = " dd\nMMMM\nyyy"
+        formatter.dateFormat = "dd\nMMMM\nyyy"
         let stringData = formatter.string(from: date)
+        let formatterLabel = DateFormatter()
+        formatterLabel.dateFormat = "dd/MM/yyyy"
+        let stringLabel = formatterLabel.string(from: date)
         
-        let entidadeEntrada = NSEntityDescription.entity(forEntityName: "TesteVic", in: self.objetoGerenciado)
+        let entidadeEntrada = NSEntityDescription.entity(forEntityName: "EntradasTeste3", in: self.objetoGerenciado)
         let objetoEntrada = NSManagedObject(entity: entidadeEntrada!, insertInto: self.objetoGerenciado)
         
         objetoEntrada.setValue(textViewNota.text, forKey: "corpoTexto")
         objetoEntrada.setValue(stringData, forKey: "criadoEm")
+        objetoEntrada.setValue(stringLabel, forKey: "labelData")
         
         do {
             try objetoGerenciado.save()
         } catch let error as NSError {
-            print("could not save the new entry \(error.description)")
+            print("Não foi possível salvar a entrada \(error.description)")
         }
     }
     
@@ -84,3 +88,4 @@ class Entrada: UIViewController, UITextViewDelegate {
     }
 
 }
+

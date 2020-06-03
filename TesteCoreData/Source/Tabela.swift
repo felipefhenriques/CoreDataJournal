@@ -47,17 +47,13 @@ class Lista: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
 
         let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "TesteVic")
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "EntradasTeste3")
 
         do {
             notas = try managedContext.fetch(fetchRequest).reversed()
-//          for i in 0..<notas.count{
-//              let entrada = self.notas[i]
-//              print(entrada.value(forKey: "corpoTexto") as? String)
-//          }
             self.listaNotas.reloadData()
         } catch let error as NSError {
-          print("Could not fetch. \(error), \(error.userInfo)")
+          print("Não foi possível carregar os dados. \(error), \(error.userInfo)")
         }
         
         
@@ -81,4 +77,61 @@ class Lista: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let nota = self.notas[indexPath.row]
+        self.performSegue(withIdentifier: "CarregaNota", sender: nota)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "CarregaNota"){
+            let carregaNotaVC  = segue.destination as! reverEntrada
+            carregaNotaVC.nota = sender as? NSManagedObject
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete){
+            let nota = self.notas[indexPath.row]
+            self.objetoGerenciado?.delete(nota)
+            self.notas.remove(at: indexPath.row)
+
+            self.listaNotas.deleteRows(at: [indexPath], with: .automatic)
+            
+            do {
+                try objetoGerenciado?.save()
+            } catch let erro as NSError {
+                print("Não foi possível excluir objeto: \(erro), \(erro.localizedDescription)")
+        }
+    }
+}
+
+class reverEntrada: UIViewController {
+    @IBOutlet weak var textViewEntrada: UITextView!
+    @IBOutlet weak var viewEntrada: UIView!
+    @IBOutlet weak var labelData: UILabel!
+    var nota: NSManagedObject!
+    
+    override func viewDidLoad() {
+        textViewEntrada.text = nota.value(forKey: "corpoTexto") as? String
+        labelData.text = nota.value(forKey: "labelData") as? String
+        estetica(view: viewEntrada, textView: textViewEntrada)
+    }
+    
+    func estetica(view: UIView, textView: UITextView){
+        view.layer.cornerRadius = 50
+        textView.layer.cornerRadius = 50
+        textView.textContainerInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+    }
+    
+    @IBAction func bttVoltar(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+}
 }

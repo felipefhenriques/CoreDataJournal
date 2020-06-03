@@ -19,6 +19,7 @@
 		023F09B72486C30500E96EAF /* Diario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023F09B62486C30500E96EAF /* Diario.swift */; };
 		023F09BB2486F09200E96EAF /* Tabela.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023F09BA2486F09200E96EAF /* Tabela.swift */; };
 		023F09BD2486F13800E96EAF /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023F09BC2486F13800E96EAF /* TableController.swift */; };
+		0284BF6024871162006DBD9E /* Cadastro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0284BF5F24871162006DBD9E /* Cadastro.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		023F09B62486C30500E96EAF /* Diario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diario.swift; sourceTree = "<group>"; };
 		023F09BA2486F09200E96EAF /* Tabela.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabela.swift; sourceTree = "<group>"; };
 		023F09BC2486F13800E96EAF /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
+		0284BF5F24871162006DBD9E /* Cadastro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cadastro.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		023F09B52486C2DB00E96EAF /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				0284BF5E2487114E006DBD9E /* User */,
 				023F09B62486C30500E96EAF /* Diario.swift */,
 				023F09BA2486F09200E96EAF /* Tabela.swift */,
 				023F09BC2486F13800E96EAF /* TableController.swift */,
@@ -154,6 +157,14 @@
 				023F09882485CDC000E96EAF /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0284BF5E2487114E006DBD9E /* User */ = {
+			isa = PBXGroup;
+			children = (
+				0284BF5F24871162006DBD9E /* Cadastro.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +300,7 @@
 			files = (
 				023F09BD2486F13800E96EAF /* TableController.swift in Sources */,
 				023F09BB2486F09200E96EAF /* Tabela.swift in Sources */,
+				0284BF6024871162006DBD9E /* Cadastro.swift in Sources */,
 				023F09872485CDC000E96EAF /* ViewController.swift in Sources */,
 				023F09B72486C30500E96EAF /* Diario.swift in Sources */,
 				023F09832485CDC000E96EAF /* AppDelegate.swift in Sources */,

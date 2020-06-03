@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class">
         <attribute name="corpoTexto" optional="YES" attributeType="String"/>
         <attribute name="criadoEm" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="EntradasTeste3" representedClassName="EntradasTeste3" syncable="YES" codeGenerationType="class">
+        <attribute name="corpoTexto" optional="YES" attributeType="String"/>
+        <attribute name="criadoEm" optional="YES" attributeType="String"/>
+        <attribute name="labelData" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Nota" representedClassName="Nota" syncable="YES" codeGenerationType="class">
         <attribute name="corpoTexto" optional="YES" attributeType="String"/>
@@ -21,5 +26,6 @@
         <element name="Nota" positionX="-54" positionY="-9" width="128" height="73"/>
         <element name="NotasTeste" positionX="-18" positionY="54" width="128" height="73"/>
         <element name="TesteVic" positionX="0" positionY="72" width="128" height="73"/>
+        <element name="EntradasTeste3" positionX="-27" positionY="45" width="128" height="88"/>
     </elements>
 </model>
