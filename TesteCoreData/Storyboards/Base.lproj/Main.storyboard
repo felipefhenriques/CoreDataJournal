@@ -71,7 +71,7 @@
         <!--Lista-->
         <scene sceneID="HDo-WP-R5e">
             <objects>
-                <viewController id="MSi-F5-c4X" customClass="Lista" customModule="TesteCoreData" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="idTabela" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MSi-F5-c4X" customClass="Lista" customModule="TesteCoreData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H3P-E9-Ftr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,7 +91,7 @@
                                     <color key="titleColor" red="0.70980392160000005" green="0.50588235290000005" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="dTN-xf-Elg" kind="show" id="hc1-eT-fyh"/>
+                                    <action selector="bttConfigs:" destination="MSi-F5-c4X" eventType="touchUpInside" id="fX1-zo-hg4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxS-aa-Mva">
@@ -142,16 +142,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUU-8i-rQr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-710" y="-333"/>
-        </scene>
-        <!--Cadastro-->
-        <scene sceneID="He5-Cf-2S7">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Cadastro" id="dTN-xf-Elg" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="3Fb-Fc-t9G"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jyi-yx-42j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-110" y="-625"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mxp-MQ-7y9">

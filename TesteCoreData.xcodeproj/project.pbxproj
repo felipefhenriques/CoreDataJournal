@@ -18,6 +18,9 @@
 		023F09A82485CDC500E96EAF /* TesteCoreDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023F09A72485CDC500E96EAF /* TesteCoreDataUITests.swift */; };
 		023F09B72486C30500E96EAF /* Diario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023F09B62486C30500E96EAF /* Diario.swift */; };
 		023F09BB2486F09200E96EAF /* Tabela.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023F09BA2486F09200E96EAF /* Tabela.swift */; };
+		024F0EE324895D87007A2FA8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024F0EE224895D87007A2FA8 /* Login.storyboard */; };
+		024F0EE524895F48007A2FA8 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F0EE424895F48007A2FA8 /* Login.swift */; };
+		024F0EE724896C37007A2FA8 /* RedefinirSenha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F0EE624896C37007A2FA8 /* RedefinirSenha.swift */; };
 		0264025C2488147D00712D03 /* ReverEntrada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0264025B2488147D00712D03 /* ReverEntrada.swift */; };
 		0284BF6024871162006DBD9E /* Cadastro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0284BF5F24871162006DBD9E /* Cadastro.swift */; };
 		0284BF6224881049006DBD9E /* Cadastro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0284BF6124881049006DBD9E /* Cadastro.storyboard */; };
@@ -58,6 +61,9 @@
 		023F09A92485CDC500E96EAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		023F09B62486C30500E96EAF /* Diario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diario.swift; sourceTree = "<group>"; };
 		023F09BA2486F09200E96EAF /* Tabela.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabela.swift; sourceTree = "<group>"; };
+		024F0EE224895D87007A2FA8 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		024F0EE424895F48007A2FA8 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		024F0EE624896C37007A2FA8 /* RedefinirSenha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedefinirSenha.swift; sourceTree = "<group>"; };
 		0264025B2488147D00712D03 /* ReverEntrada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverEntrada.swift; sourceTree = "<group>"; };
 		0284BF5F24871162006DBD9E /* Cadastro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cadastro.swift; sourceTree = "<group>"; };
 		0284BF6124881049006DBD9E /* Cadastro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cadastro.storyboard; sourceTree = "<group>"; };
@@ -149,6 +155,7 @@
 				023F09B62486C30500E96EAF /* Diario.swift */,
 				023F09BA2486F09200E96EAF /* Tabela.swift */,
 				0264025B2488147D00712D03 /* ReverEntrada.swift */,
+				024F0EE424895F48007A2FA8 /* Login.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -158,6 +165,7 @@
 			children = (
 				023F09882485CDC000E96EAF /* Main.storyboard */,
 				0284BF6124881049006DBD9E /* Cadastro.storyboard */,
+				024F0EE224895D87007A2FA8 /* Login.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -166,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				0284BF5F24871162006DBD9E /* Cadastro.swift */,
+				024F0EE624896C37007A2FA8 /* RedefinirSenha.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -277,6 +286,7 @@
 				023F09922485CDC500E96EAF /* LaunchScreen.storyboard in Resources */,
 				023F098F2485CDC500E96EAF /* Assets.xcassets in Resources */,
 				023F098A2485CDC000E96EAF /* Main.storyboard in Resources */,
+				024F0EE324895D87007A2FA8 /* Login.storyboard in Resources */,
 				0284BF6224881049006DBD9E /* Cadastro.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,12 +312,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				024F0EE724896C37007A2FA8 /* RedefinirSenha.swift in Sources */,
 				0264025C2488147D00712D03 /* ReverEntrada.swift in Sources */,
 				023F09BB2486F09200E96EAF /* Tabela.swift in Sources */,
 				0284BF6024871162006DBD9E /* Cadastro.swift in Sources */,
 				023F09872485CDC000E96EAF /* ViewController.swift in Sources */,
 				023F09B72486C30500E96EAF /* Diario.swift in Sources */,
 				023F09832485CDC000E96EAF /* AppDelegate.swift in Sources */,
+				024F0EE524895F48007A2FA8 /* Login.swift in Sources */,
 				023F098D2485CDC000E96EAF /* TesteCoreData.xcdatamodeld in Sources */,
 				023F09852485CDC000E96EAF /* SceneDelegate.swift in Sources */,
 			);

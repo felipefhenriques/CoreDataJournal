@@ -38,8 +38,9 @@ class cadastroPerguntas: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var txtSigno: UITextField!
     @IBOutlet weak var bttFinalizar: UIButton!
     @IBOutlet weak var labelVerifica: UILabel!
-    @IBOutlet weak var labelSenha: UILabel!
     var defaults = UserDefaults()
+    var dicionarioPreencheu: [String: Bool] = [:]
+    var dicionarioValor: [String: String] = [:]
     
     override func viewDidLoad() {
         bordas()
@@ -67,6 +68,13 @@ class cadastroPerguntas: UIViewController, UITextFieldDelegate {
             labelVerifica.text = "Responda ao menos três perguntas"
         } else {
             labelVerifica.isHidden = true
+            defaults.set(dicionarioValor, forKey: "dicValor")
+            //defaults.set(dicionarioPreencheu, forKey: "dicPreencheu")
+            defaults.set(true, forKey: "cadastrou")
+            self.navigationController?.popToRootViewController(animated: false)
+//            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let newViewController = storyBoard.instantiateViewController(withIdentifier: "idTabela") as! Lista
+//            self.navigationController?.pushViewController(newViewController, animated: true)
         }
     }
     
@@ -99,36 +107,51 @@ class cadastroPerguntas: UIViewController, UITextFieldDelegate {
         if(verifica(textField: txtNomeMae)){
             conta += 1
             maeJaAdicionado = true
+            //dicionarioPreencheu = ["Qual é o nome completo da sua mãe?": true]
+            dicionarioValor = ["Qual o nome completo da sua mãe?": txtNomeMae.text!]
         } else if maeJaAdicionado == true{
             conta -= 1
+            //dicionarioPreencheu = ["mae" : false]
         }
             
         if(verifica(textField: txtAmigo)){
             conta += 1
             amigoJaAdicionado = true
-        } else if amigoJaAdicionado == true{
+            //dicionarioPreencheu = ["amigo": true]
+            dicionarioValor = ["Seu melhor amigo da infância?": txtAmigo.text!]
+        } else if amigoJaAdicionado == true {
             conta -= 1
+            //dicionarioPreencheu = ["amigo" : false]
         }
         
         if(verifica(textField: txtCidade)){
             conta += 1
             cidadeJaAdicionado = true
+            //dicionarioPreencheu = ["cidade": true]
+            dicionarioValor = ["Cidade em que você nasceu?": txtCidade.text!]
         } else if cidadeJaAdicionado == true{
             conta -= 1
+            //dicionarioPreencheu = ["cidade" : false]
         }
         
         if(verifica(textField: txtPet)){
             conta += 1
             petJaAdicionado = true
+            //dicionarioPreencheu = ["pet": true]
+            dicionarioValor = ["Primeiro pet?": txtPet.text!]
         } else if petJaAdicionado == true{
             conta -= 1
+            //dicionarioPreencheu = ["pet": false]
         }
         
         if(verifica(textField: txtSigno)){
             conta += 1
             signoJaAdicionado = true
+            //dicionarioPreencheu = ["signo": true]
+            dicionarioValor = ["Seu signo?": txtSigno.text!]
         } else if signoJaAdicionado == true{
             conta -= 1
+            //dicionarioPreencheu = ["signo" : false]
         }
         
         return conta;

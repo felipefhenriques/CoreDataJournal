@@ -15,6 +15,9 @@ class reverEntradas: UIViewController {
     @IBOutlet weak var viewEntrada: UIView!
     @IBOutlet weak var labelData: UILabel!
     var nota: NSManagedObject!
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     override func viewDidLoad() {
         textViewEntrada.text = nota.value(forKey: "corpoTexto") as? String

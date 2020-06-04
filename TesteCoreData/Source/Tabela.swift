@@ -19,8 +19,20 @@ class Lista: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    var defaults = UserDefaults.standard
+    var primeiroAcesso: Bool = false
     
     override func viewDidLoad() {
+        self.navigationController?.isNavigationBarHidden = true
+        if(defaults.value(forKey: "cadastrou") == nil){
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Cadastro", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "cadastroSenha") as! cadastroSenha
+            self.navigationController?.pushViewController(newViewController, animated: false)
+        } else if (defaults.value(forKey: "cadastrou") as? Bool == true) {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "login") as! Login
+            self.navigationController?.pushViewController(newViewController, animated: false)
+        }
         //Recuperar dados
         lerEntradas()
         
@@ -31,7 +43,6 @@ class Lista: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         //Estética
         bttNotaDiaria.layer.cornerRadius = 40
-        self.navigationController?.isNavigationBarHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,6 +69,11 @@ class Lista: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         
     }
+
+    @IBAction func bttConfigs(_ sender: UIButton) {
+        defaults.removeObject(forKey: "cadastrou")
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notas.count
