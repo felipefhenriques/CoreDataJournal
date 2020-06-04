@@ -19,11 +19,13 @@ class Entrada: UIViewController, UITextViewDelegate {
     @IBOutlet weak var bttAdicionar: UIButton!
     @IBOutlet weak var labelData: UILabel!
     var entradas: [NSManagedObject]!
-    override var prefersStatusBarHidden: Bool {
-        return true
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
     }
+   
     
     override func viewDidLoad() {
+        setNeedsStatusBarAppearanceUpdate()
         self.navigationController?.isNavigationBarHidden = true
         textViewNota.delegate = self
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

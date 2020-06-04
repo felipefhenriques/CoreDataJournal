@@ -15,11 +15,12 @@ class reverEntradas: UIViewController {
     @IBOutlet weak var viewEntrada: UIView!
     @IBOutlet weak var labelData: UILabel!
     var nota: NSManagedObject!
-    override var prefersStatusBarHidden: Bool {
-        return true
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
     }
     
     override func viewDidLoad() {
+        setNeedsStatusBarAppearanceUpdate()
         textViewEntrada.text = nota.value(forKey: "corpoTexto") as? String
         labelData.text = nota.value(forKey: "labelData") as? String
         estetica(view: viewEntrada, textView: textViewEntrada)

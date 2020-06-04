@@ -36,7 +36,7 @@
                                 <color key="textColor" red="0.7843137255" green="0.78823529410000004" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="SENHA" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y1T-8a-KkC">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y1T-8a-KkC">
                                 <rect key="frame" x="47" y="400" width="321" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.20784313730000001" green="0.18823529410000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -46,7 +46,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VY-kZ-aT4">
-                                <rect key="frame" x="108" y="497" width="199" height="58"/>
+                                <rect key="frame" x="108" y="485" width="199" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.70980392160000005" green="0.50588235290000005" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
@@ -73,32 +73,16 @@
             </objects>
             <point key="canvasLocation" x="17" y="-35"/>
         </scene>
-        <!--Cadastro Perguntas-->
+        <!--Cadastro Dica-->
         <scene sceneID="nvg-Av-bdz">
             <objects>
-                <viewController id="TNK-zA-N1S" customClass="cadastroPerguntas" customModule="TesteCoreData" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TNK-zA-N1S" customClass="cadastroDica" customModule="TesteCoreData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vme-Dt-bEP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Qual o nome completo da sua mãe?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuY-7a-ZQ0">
-                                <rect key="frame" x="48" y="196" width="304" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" red="0.7843137255" green="0.78823529410000004" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="SENHA" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c3B-S8-0az">
-                                <rect key="frame" x="47" y="227" width="321" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.20784313730000001" green="0.18823529410000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.7843137255" green="0.78823529410000004" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="0.7843137255" green="0.78823529410000004" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r45-aC-j0O">
-                                <rect key="frame" x="108" y="775" width="199" height="58"/>
+                                <rect key="frame" x="108" y="485" width="199" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.70980392160000005" green="0.50588235290000005" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
@@ -109,79 +93,45 @@
                                     <action selector="bttSalvar:" destination="TNK-zA-N1S" eventType="touchUpInside" id="lx8-tt-j17"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Responda ao menos 3 perguntas de segurança caso você esqueça sua senha" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCG-dP-TT7">
-                                <rect key="frame" x="67" y="92" width="281" height="69"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AmP-Tq-E2e">
+                                <rect key="frame" x="48" y="369" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.7843137255" green="0.78823529410000004" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seu melhor amigo da infância?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AmP-Tq-E2e">
-                                <rect key="frame" x="48" y="295" width="260" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" red="0.7843137255" green="0.78823529410000004" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="SENHA" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ltP-oG-QbB">
-                                <rect key="frame" x="47" y="326" width="321" height="60"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Dica" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ltP-oG-QbB">
+                                <rect key="frame" x="47" y="400" width="321" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.20784313730000001" green="0.18823529410000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.7843137255" green="0.78823529410000004" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.7843137255" green="0.78823529410000004" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cidade em que você nasceu?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgB-U0-gIM">
-                                <rect key="frame" x="49" y="394" width="250" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Digite uma dica para caso você esqueça sua senha" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCG-dP-TT7">
+                                <rect key="frame" x="97" y="197" width="220" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.7843137255" green="0.78823529410000004" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="SENHA" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FzS-Tf-vg2">
-                                <rect key="frame" x="48" y="425" width="321" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.20784313730000001" green="0.18823529410000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.7843137255" green="0.78823529410000004" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="0.7843137255" green="0.78823529410000004" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Primeiro pet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4F-9V-nbR">
-                                <rect key="frame" x="50" y="493" width="113" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Digite uma dica: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0D-TI-jBe">
+                                <rect key="frame" x="52" y="369" width="142" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.7843137255" green="0.78823529410000004" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="SENHA" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d9K-12-2eR">
-                                <rect key="frame" x="49" y="524" width="321" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Definir dica" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlD-Oo-PdE">
+                                <rect key="frame" x="117" y="148" width="180" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.20784313730000001" green="0.18823529410000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.7843137255" green="0.78823529410000004" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="0.7843137255" green="0.78823529410000004" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seu signo?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEL-C4-ZZF">
-                                <rect key="frame" x="50" y="592" width="93" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" red="0.7843137255" green="0.78823529410000004" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <color key="textColor" red="0.70980392160000005" green="0.50588235290000005" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="SENHA" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YTc-Ux-DEC">
-                                <rect key="frame" x="49" y="624" width="321" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.20784313730000001" green="0.18823529410000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.7843137255" green="0.78823529410000004" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="0.7843137255" green="0.78823529410000004" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
-                            </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Verificação" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Og-ji-jjY">
-                                <rect key="frame" x="47" y="707" width="321" height="22"/>
+                                <rect key="frame" x="47" y="570" width="321" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -196,16 +146,12 @@
                     <connections>
                         <outlet property="bttFinalizar" destination="r45-aC-j0O" id="FeA-xZ-qYU"/>
                         <outlet property="labelVerifica" destination="7Og-ji-jjY" id="eD9-OU-yHR"/>
-                        <outlet property="txtAmigo" destination="ltP-oG-QbB" id="w2o-yU-Xyz"/>
-                        <outlet property="txtCidade" destination="FzS-Tf-vg2" id="OIt-Na-Og5"/>
-                        <outlet property="txtNomeMae" destination="c3B-S8-0az" id="epD-JD-wb8"/>
-                        <outlet property="txtPet" destination="d9K-12-2eR" id="fcV-3o-lu2"/>
-                        <outlet property="txtSigno" destination="YTc-Ux-DEC" id="EpH-1g-HzQ"/>
+                        <outlet property="txtResposta" destination="ltP-oG-QbB" id="tnS-6W-kFj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9Y-rq-kxx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="824.63768115942037" y="-35.491071428571423"/>
+            <point key="canvasLocation" x="884" y="-35"/>
         </scene>
     </scenes>
 </document>

@@ -16,13 +16,15 @@ class Lista: UIViewController, UITableViewDelegate, UITableViewDataSource {
     public var notas:[NSManagedObject] = []
     @IBOutlet weak var listaNotas: UITableView!
     var objetoGerenciado: NSManagedObjectContext?
-    override var prefersStatusBarHidden: Bool {
-        return true
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
     }
+    
     var defaults = UserDefaults.standard
     var primeiroAcesso: Bool = false
     
     override func viewDidLoad() {
+        setNeedsStatusBarAppearanceUpdate()
         self.navigationController?.isNavigationBarHidden = true
         if(defaults.value(forKey: "cadastrou") == nil){
             let storyBoard: UIStoryboard = UIStoryboard(name: "Cadastro", bundle: nil)

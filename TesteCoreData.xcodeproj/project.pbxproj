@@ -20,7 +20,6 @@
 		023F09BB2486F09200E96EAF /* Tabela.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023F09BA2486F09200E96EAF /* Tabela.swift */; };
 		024F0EE324895D87007A2FA8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024F0EE224895D87007A2FA8 /* Login.storyboard */; };
 		024F0EE524895F48007A2FA8 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F0EE424895F48007A2FA8 /* Login.swift */; };
-		024F0EE724896C37007A2FA8 /* RedefinirSenha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F0EE624896C37007A2FA8 /* RedefinirSenha.swift */; };
 		0264025C2488147D00712D03 /* ReverEntrada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0264025B2488147D00712D03 /* ReverEntrada.swift */; };
 		0284BF6024871162006DBD9E /* Cadastro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0284BF5F24871162006DBD9E /* Cadastro.swift */; };
 		0284BF6224881049006DBD9E /* Cadastro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0284BF6124881049006DBD9E /* Cadastro.storyboard */; };
@@ -63,7 +62,6 @@
 		023F09BA2486F09200E96EAF /* Tabela.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabela.swift; sourceTree = "<group>"; };
 		024F0EE224895D87007A2FA8 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		024F0EE424895F48007A2FA8 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		024F0EE624896C37007A2FA8 /* RedefinirSenha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedefinirSenha.swift; sourceTree = "<group>"; };
 		0264025B2488147D00712D03 /* ReverEntrada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverEntrada.swift; sourceTree = "<group>"; };
 		0284BF5F24871162006DBD9E /* Cadastro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cadastro.swift; sourceTree = "<group>"; };
 		0284BF6124881049006DBD9E /* Cadastro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cadastro.storyboard; sourceTree = "<group>"; };
@@ -174,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				0284BF5F24871162006DBD9E /* Cadastro.swift */,
-				024F0EE624896C37007A2FA8 /* RedefinirSenha.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -312,7 +309,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				024F0EE724896C37007A2FA8 /* RedefinirSenha.swift in Sources */,
 				0264025C2488147D00712D03 /* ReverEntrada.swift in Sources */,
 				023F09BB2486F09200E96EAF /* Tabela.swift in Sources */,
 				0284BF6024871162006DBD9E /* Cadastro.swift in Sources */,

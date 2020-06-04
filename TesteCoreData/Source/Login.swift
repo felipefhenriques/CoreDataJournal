@@ -14,12 +14,13 @@ class Login: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var txtSenha: UITextField!
     @IBOutlet weak var labelAviso: UILabel!
     var defaults = UserDefaults()
-    override var prefersStatusBarHidden: Bool {
-        return true
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
     }
     
     override func viewDidLoad() {
-        txtSenha.attributedPlaceholder = NSAttributedString(string: "SENHA", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        setNeedsStatusBarAppearanceUpdate()
+        txtSenha.attributedPlaceholder = NSAttributedString(string: "Senha", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         bttAcessar.layer.cornerRadius = 30
         txtSenha.layer.cornerRadius = 28
         txtSenha.delegate = self
@@ -28,10 +29,10 @@ class Login: UIViewController, UITextFieldDelegate {
     
     @IBAction func bttAcesso(_ sender: UIButton) {
         if(verificaSenha() == true){
-            self.navigationController?.popToRootViewController(animated: false)
+            transicao()
         } else {
             labelAviso.isHidden = false
-            labelAviso.text = "Senha incorreta"
+            labelAviso.text = "Senha incorreta\n Dica: " + (defaults.value(forKey: "dicaUser") as! String)
         }
         
     }
@@ -48,5 +49,14 @@ class Login: UIViewController, UITextFieldDelegate {
         } else {
             return false
         }
+    }
+    
+    func transicao(){
+        let transition = CATransition()
+        transition.duration = 0.2777
+        transition.type = CATransitionType.moveIn
+        transition.subtype = CATransitionSubtype.fromRight
+        self.navigationController?.view.layer.add(transition, forKey: kCATransition)
+        self.navigationController?.popToRootViewController(animated: false)
     }
 }
