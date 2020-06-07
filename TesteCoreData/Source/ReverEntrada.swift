@@ -11,9 +11,9 @@ import CoreData
 import UIKit
 
 class reverEntradas: UIViewController {
-    @IBOutlet weak var textViewEntrada: UITextView!
     @IBOutlet weak var viewEntrada: UIView!
     @IBOutlet weak var labelData: UILabel!
+    @IBOutlet weak var textViewEntrada: UITextView!
     var nota: NSManagedObject!
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent

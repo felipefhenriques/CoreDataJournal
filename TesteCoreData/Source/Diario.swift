@@ -42,7 +42,7 @@ class Entrada: UIViewController, UITextViewDelegate {
         formatterLabel.dateFormat = "dd/MM/yyyy"
         let stringLabel = formatterLabel.string(from: date)
         
-        let entidadeEntrada = NSEntityDescription.entity(forEntityName: "Teste4", in: self.objetoGerenciado)
+        let entidadeEntrada = NSEntityDescription.entity(forEntityName: "Diario", in: self.objetoGerenciado)
         let objetoEntrada = NSManagedObject(entity: entidadeEntrada!, insertInto: self.objetoGerenciado)
         
         objetoEntrada.setValue(textViewNota.text, forKey: "corpoTexto")

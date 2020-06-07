@@ -19,11 +19,15 @@ class Lista: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }
+    @IBOutlet weak var lblDataTabela: UILabel!
+    @IBOutlet weak var lblTituloTabela: UILabel!
+    
     
     var defaults = UserDefaults.standard
     var primeiroAcesso: Bool = false
     
     override func viewDidLoad() {
+        self.listaNotas.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         setNeedsStatusBarAppearanceUpdate()
         self.navigationController?.isNavigationBarHidden = true
         if(defaults.value(forKey: "cadastrou") == nil){
@@ -60,7 +64,7 @@ class Lista: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
 
         let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Teste4")
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Diario")
 
         do {
             notas = try managedContext.fetch(fetchRequest).reversed()
@@ -73,9 +77,8 @@ class Lista: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 
     @IBAction func bttConfigs(_ sender: UIButton) {
-        defaults.removeObject(forKey: "cadastrou")
+        
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notas.count
@@ -83,12 +86,17 @@ class Lista: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let nota = notas[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        var cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        if cell == nil || cell.detailTextLabel == nil {
+            cell = UITableViewCell(style: .value1, reuseIdentifier: "Cell")
+        }
         cell.backgroundColor = UIColor.clear
         cell.textLabel?.textColor = UIColor.white
         cell.detailTextLabel?.textColor = UIColor.white
         cell.textLabel?.text = nota.value(forKeyPath: "criadoEm") as? String
         cell.detailTextLabel?.text = nota.value(forKeyPath: "corpoTexto") as? String
+        cell.detailTextLabel?.numberOfLines = 3
+        cell.detailTextLabel?.textAlignment = .right
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.font = UIFont.systemFont(ofSize: 18)
 
@@ -113,44 +121,6 @@ class Lista: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return true
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if (editingStyle == .delete){
-            let nota = self.notas[indexPath.row]
-            self.objetoGerenciado?.delete(nota)
-            self.notas.remove(at: indexPath.row)
-
-            self.listaNotas.deleteRows(at: [indexPath], with: .automatic)
-            
-            do {
-                try objetoGerenciado?.save()
-            } catch let erro as NSError {
-                print("Não foi possível excluir objeto: \(erro), \(erro.localizedDescription)")
-        }
-    }
- }
 }
 
-//class reverEntrada: UIViewController {
-//    @IBOutlet weak var textViewEntrada: UITextView!
-//    @IBOutlet weak var viewEntrada: UIView!
-//    @IBOutlet weak var labelData: UILabel!
-//    var nota: NSManagedObject!
-//
-//    override func viewDidLoad() {
-//        textViewEntrada.text = nota.value(forKey: "corpoTexto") as? String
-//        labelData.text = nota.value(forKey: "labelData") as? String
-//        estetica(view: viewEntrada, textView: textViewEntrada)
-//    }
-//
-//    func estetica(view: UIView, textView: UITextView){
-//        view.layer.cornerRadius = 50
-//        textView.layer.cornerRadius = 50
-//        textView.textContainerInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-//    }
-//
-//    @IBAction func bttVoltar(_ sender: UIButton) {
-//        self.navigationController?.popViewController(animated: true)
-//    }
-//
-//}
-
+ 

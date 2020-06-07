@@ -39,6 +39,7 @@ class Login: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
+        labelAviso.isHidden = true
         return false
     }
     
@@ -53,7 +54,7 @@ class Login: UIViewController, UITextFieldDelegate {
     
     func transicao(){
         let transition = CATransition()
-        transition.duration = 0.2777
+        transition.duration = 0.3222
         transition.type = CATransitionType.moveIn
         transition.subtype = CATransitionSubtype.fromRight
         self.navigationController?.view.layer.add(transition, forKey: kCATransition)

@@ -56,6 +56,7 @@ class cadastroDica: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
+        labelVerifica.isHidden = true
         return false
     }
     
@@ -75,7 +76,7 @@ class cadastroDica: UIViewController, UITextFieldDelegate {
     
     func transicao(){
         let transition = CATransition()
-        transition.duration = 0.27777
+        transition.duration = 0.3222
         transition.type = CATransitionType.reveal
         transition.subtype = CATransitionSubtype.fromRight
         self.navigationController?.view.layer.add(transition, forKey: kCATransition)
